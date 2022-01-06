@@ -1,0 +1,51 @@
+.tv {
+	//display: flex;
+//	align-items: center;
+	//justify-content: center;
+	text-align: center;
+	//background-color: black;
+	box-sizing: border-box;
+	box-shadow: 1.5rem 1.5rem rgba(0,0,0,.2);
+}
+.size-16x9 {
+	width: 435px;
+	height: 759px;
+	padding-top: .5rem;
+	padding-left: .5rem;
+	//translate: scale(0.25)
+}
+.size-32x9 {
+	width: 241px;
+	height: 850px;
+	padding-top: .2rem;
+	padding-left: .1rem;
+	//background-color: blue;
+	//translate: scale(0.25)
+}
+.size-58x9 {
+	width: 140px;
+	height: 850px;
+	//background-color: violet;
+	//translate: scale(0.25)
+}
+/*
+ 88” Ultra Stretch
+
+3840x1080
+32:9 aspect ratio
+24.1” x 85”
+ 
+
+86” Ultra Stretch
+
+3840x600
+58:9 aspect ratio
+14”x 85”
+ 
+
+86” UHD
+
+3840x2160
+16:9
+43.5” x 75.9”
+*/

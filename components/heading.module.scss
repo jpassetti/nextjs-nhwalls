@@ -1,0 +1,79 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.heading1 {
+	font-weight: bold;
+	font-size: vars.$root*12;
+	line-height: 1;
+	font-family: vars.$font_primary;
+	text-transform: uppercase;
+	//color: vars.$color_blue;
+}
+.heading2 {
+	font-weight: bold;
+	font-size: vars.$root*6;
+	margin-bottom: 1rem;
+	font-family: vars.$font_primary;
+	//background-color: pink;
+	&.title {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		color: vars.$color_violet;
+	}
+}
+.heading3 {
+	font-weight: bold;
+	font-size: vars.$root*4;
+	font-family: vars.$font_primary;
+	//background-color: limegreen;
+	a {
+		color: inherit;
+	}
+	&.category {
+		text-transform: uppercase;
+		color: vars.$color_teal;
+	}
+	&.title {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		color: vars.$color_violet;
+	}
+}
+.heading4 {
+	font-style: italic;
+	font-family: vars.$font_primary;
+	font-size: vars.$root*3;
+}
+.white {
+	color: white;
+	a {
+		color: white;
+	}
+}
+.teal {
+	color: vars.$color_teal;
+}
+.violet {
+	color: vars.$color_violet;
+}
+.mb1 {
+	margin-bottom: 1rem;
+}
+.mb2 {
+	margin-bottom: 2rem;
+}
+.mt1 {
+	margin-top: 1rem;
+}
+.mt2 {
+	margin-top: 2rem;
+}
+.text-align-left {
+	text-align: left;
+}
+.text-align-right {
+	text-align: right;
+}
+.text-align-center {
+	text-align: center;
+}

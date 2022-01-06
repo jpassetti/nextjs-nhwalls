@@ -1,0 +1,12 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.orange {
+	color: vars.$color_orange;
+}
+.blue {
+	color: vars.$color_blue;
+}
+.white {
+	color: white;
+}

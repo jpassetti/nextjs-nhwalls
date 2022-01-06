@@ -1,0 +1,30 @@
+$color_orange: #f76900;
+$color_blue: #000e54;
+
+$color_green: #006341;
+$color_green_hover: #006437;
+$color_green_10: #e5efec;
+$color_white: #FFFFFF;
+$color_black: #000000;
+$color_gray_light: #e5e5e5;
+$color_gray_dark: #717171;
+
+$color_violet: #5329A5;
+$color_violet_10: #ede9f6;
+//$color_blue: #4963DE;
+$color_teal: #4ccAE0;
+
+$font_primary: ShermanSans, Verdana, sans-serif;
+
+$hexagon-width: 250px;
+$hexagon-height: 293px;
+$hexagon-margin: 8px;
+$hexagon-title-color: #fff;
+$hexagon-border-color: #fff;
+$hexagon-border-color--hover: #72f88e;
+$hexagon-image-color: #3ea0eb;
+$honeycomb-max-width: 1200px;
+//$honeycomb-max-width: 1124px;
+$viewport-thereshold: $hexagon-width + $hexagon-margin;
+
+$root : 1rem;

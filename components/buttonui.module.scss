@@ -1,0 +1,16 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.buttonui {
+	background-color: #fff;
+	padding: .5rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	font-family: vars.$font_primary;
+	&.xl {
+		font-size: 2rem;
+	}
+	&.active {
+		border-bottom: 3px solid vars.$color_orange;
+	}
+}

@@ -1,0 +1,9 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.footer {
+	background-color: vars.$color_blue;
+	color: white;
+	padding: 6rem;
+	border-bottom: 1rem solid vars.$color_orange;
+}

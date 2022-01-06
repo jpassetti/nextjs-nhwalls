@@ -1,0 +1,33 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.block {
+	color: vars.$color_blue;
+	padding: 6rem;
+	&.intro {
+		padding: 6rem;
+	}
+	&.cta {
+		padding: 6rem;
+		text-align: right;
+	}
+	&.orange {
+		background-color: vars.$color_orange;
+		color: #fff;
+	}
+	&.blue {
+		background-color: vars.$color_blue;
+		color: #fff;
+	}
+	&.screen {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1000;
+		background-color: vars.$color_orange;
+		display: flex;
+		align-items: center;
+	}
+}

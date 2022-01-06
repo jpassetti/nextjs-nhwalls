@@ -1,0 +1,9 @@
+@use '../styles/abstracts/vars';
+@use '../styles/abstracts/mixins';
+
+.paragraph {
+	font-size: vars.$root * 3;
+	line-height: 1.5;
+	font-family: vars.$font_primary;
+	color: vars.$color_blue;
+}

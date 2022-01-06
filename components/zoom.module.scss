@@ -1,0 +1,9 @@
+.zoom {
+	transform-origin: top left;
+	@for $i from 1 through 12 {
+		&.zoom-times-#{$i} {
+			$num : $i*0.0625;
+			transform: scale(#{$num});
+		}
+	}
+}
