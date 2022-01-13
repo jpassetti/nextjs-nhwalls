@@ -4,6 +4,7 @@
 .block {
 	color: vars.$color_blue;
 	padding: 6rem;
+	box-sizing: border-box;
 	&.intro {
 		padding: 6rem;
 	}
@@ -19,6 +20,10 @@
 		background-color: vars.$color_blue;
 		color: #fff;
 	}
+	&.white {
+		background-color: vars.$color_white;
+		color: vars.$color_blue;
+	}
 	&.screen {
 		position: fixed;
 		top: 0;
@@ -26,8 +31,43 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: 1000;
-		background-color: vars.$color_orange;
+		//background-color: vars.$color_orange;
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+	}
+	&.photo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1000;
+	}
+	&.bgColor-blue {
+		background-color: vars.$color_blue;
+		color: #fff;
+	}
+	&.bgColor-white {
+		background-color: vars.$color_white;
+		color: vars.$color_blue;
+	}
+	&.bgColor-orange {
+		background-color: vars.$color_orange;
+		color: vars.$color_white;
+	}
+	&.noPadding {
+		padding: 0;
+	}
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5rem;
+		background-color: vars.$color_orange;
+		z-index: 100;
+		content: '';
+		display: block;
 	}
 }

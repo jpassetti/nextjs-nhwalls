@@ -6,4 +6,18 @@
 	line-height: 1.5;
 	font-family: vars.$font_primary;
 	color: vars.$color_blue;
+	box-sizing: border-box;
+	&.intro {
+		font-size: vars.$root * 6;
+		padding: 9rem;
+	}
+	&.white {
+		color: vars.$color_white;
+	}
+	&.blue {
+		color: vars.$color_blue;
+	}
+	&.orange {
+		color: vars.$color_orange;
+	}
 }

@@ -1,15 +1,32 @@
 import ButtonUI from '../components/ButtonUI'
 import ButtonGroup from '../components/ButtonGroup'
 import Container from '../components/Container'
+import TitleFeed from '../components/TitleFeed'
 import Frame from '../components/Frame'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+
+import { getPosters } from '../lib/posters'
 
 import Row from '../components/Row'
 import TV from '../components/TV'
 import Zoom from '../components/Zoom'
 
 const Lobby = () => {
+	const posters = getPosters()
 	const [zoomLevel, setZoomLevel] = useState(.5)
+	const [currentPosterIndex, setCurrentPosterIndex] = useState(0)
+	
+	useEffect(() => {
+		const timer = setInterval(() => {
+			if (currentPosterIndex >= posters.length-1) {
+				setCurrentPosterIndex(0);
+			} else {
+				setCurrentPosterIndex(currentPosterIndex + 1);
+			}
+		}, 15000);
+		// clearing interval
+		return () => clearInterval(timer);
+	});
 
 	return <div style={
 		{ 
@@ -27,31 +44,45 @@ const Lobby = () => {
 			<ButtonUI label="100%" clickHandler={() => {
 				setZoomLevel(1)
 			}} />
+			<ButtonUI label="Previous" clickHandler={() => {
+				if (currentPosterIndex <= 0) {
+					setCurrentPosterIndex(posters.length - 1);
+				} else {
+					setCurrentPosterIndex(currentPosterIndex -1);
+				}
+			}} />
+			<ButtonUI label="Next" clickHandler={() => {
+				if (currentPosterIndex >= posters.length - 1) {
+					setCurrentPosterIndex(0);
+				} else {
+					setCurrentPosterIndex(currentPosterIndex + 1);
+				}
+			}} />
 		</ButtonGroup>
 		<Row justifyContent="space-evenly" alignItems="center" mt="2">
+			<TV size="32x9">
+				<Zoom size="3.5">
+					<Frame titleFeed src={`/feed/title/${posters[currentPosterIndex].slug}`} />
+				</Zoom>
+			</TV>
 			<TV size="16x9">
 				<Zoom size="3.1">
-					<Frame feed="1" size="16x9" />
+					<Frame contentFeed src={`/feed/content/${posters[currentPosterIndex].slug}`} />
 				</Zoom>
 			</TV>
 			<TV size="32x9">
 				<Zoom size="3.5">
-					<Frame feed="2" size="32x9" />
+					<Frame titleFeed src={`/feed/title/${posters[currentPosterIndex].slug}`} />
 				</Zoom>
 			</TV>
 			<TV size="16x9">
 				<Zoom size="3.1">
-					<Frame feed="3" size="16x9" />
+					<Frame photoFeed src={`/feed/photo/${posters[currentPosterIndex].slug}`} />
 				</Zoom>
 			</TV>
 			<TV size="32x9">
 				<Zoom size="3.5">
-					<Frame feed="2" size="32x9" />
-				</Zoom>
-			</TV>
-			<TV size="16x9">
-				<Zoom size="3.1">
-					<Frame feed="5" size="16x9" />
+					<Frame titleFeed src={`/feed/title/${posters[currentPosterIndex].slug}`} />
 				</Zoom>
 			</TV>
 		</Row>

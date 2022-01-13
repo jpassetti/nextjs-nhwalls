@@ -7,7 +7,13 @@
 	line-height: 1;
 	font-family: vars.$font_primary;
 	text-transform: uppercase;
+	//background-color: limegreen;
+	display: inline-block;
 	//color: vars.$color_blue;
+	//width: 100%;
+	&.xl {
+		font-size: vars.$root*16;
+	}
 }
 .heading2 {
 	font-weight: bold;
@@ -76,4 +82,15 @@
 }
 .text-align-center {
 	text-align: center;
+}
+.rotate {
+	//transform: rotate(-90deg) translate(0, -25%);
+	//transform-origin: 0 0;
+	//writing-mode: vertical-rl;
+//text-orientation: mixed;
+position: absolute;
+bottom: 200px;
+//left: 50%;
+// transform: rotate(-90deg);
+// transform-origin: 0 0;
 }
