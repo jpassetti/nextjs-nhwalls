@@ -5,8 +5,9 @@ import Color from './Color'
 import Heading from './Heading'
 import RotateScreen from './RotateScreen'
 
-const TitleFeed = () => {
+const TitleFeed = ({ data }) => {
 	//3840x1080
+	const { orange, blue } = data.title;
 
 	const variants = {
 		visible: {
@@ -38,10 +39,10 @@ const TitleFeed = () => {
 					initial="hidden"
 					variants={variants}
 				>
-				<Heading name="h1" xl>
-					<Color orange>Run the</Color><br />
-					<Color white>show</Color>
-				</Heading>
+					<Heading name="h1" xl>
+						<Color orange>{orange}</Color><br />
+						<Color white>{blue}</Color>
+					</Heading>
 				</motion.div>
 			</RotateScreen>
 		</Block>

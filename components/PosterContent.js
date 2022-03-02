@@ -19,10 +19,12 @@ const PosterContent = ({data}) => {
 	const {orange, blue} = title;
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
+		setIntroVisible(true)
+		const timerId = setTimeout(() => {
 			setIntroVisible(false)
 		}, 3000);
-	});
+		return () => clearTimeout(timerId);
+	}, [data]);
 
 	const variants = {
 		visible: i => ({
@@ -60,7 +62,7 @@ const PosterContent = ({data}) => {
 
 	return <>
 		<AnimatePresence>
-		{introVisible && 
+		{introVisible === true && 
 		<motion.div
 			className={styles.introScreen}
 			initial="hidden"
@@ -103,6 +105,7 @@ const PosterContent = ({data}) => {
 					width={5348}
 					height={3566}
 					layout="responsive"
+					priority={true}
 				/>
 			</Block>
 		</motion.div>

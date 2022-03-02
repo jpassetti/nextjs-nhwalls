@@ -11,7 +11,7 @@ import Row from '../components/Row'
 import TV from '../components/TV'
 import Zoom from '../components/Zoom'
 
-const Lobby = () => {
+const Home = () => {
 	const posters = getPosters()
 	const [zoomLevel, setZoomLevel] = useState(.5)
 	const [currentPosterIndex, setCurrentPosterIndex] = useState(0)
@@ -88,4 +88,4 @@ const Lobby = () => {
 		</Row>
 	</div>
 }
-export default Lobby
+export default Home
