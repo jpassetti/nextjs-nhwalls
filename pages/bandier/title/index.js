@@ -5,7 +5,7 @@ import Color from '../../../components/Color'
 import Heading from '../../../components/Heading'
 import RotateScreen from '../../../components/RotateScreen'
 
-const TitleFeed = ({posterData}) => {
+const BandierTitle = () => {
 	const titleData = {
 		orange: "Bandier",
 		blue: "Program"
@@ -51,5 +51,5 @@ const TitleFeed = ({posterData}) => {
 		</Block>
 	</div>
 }
-export default TitleFeed
+export default BandierTitle
 

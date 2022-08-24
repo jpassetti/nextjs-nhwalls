@@ -9,7 +9,7 @@ import RotateScreen from '../../../components/RotateScreen'
 
 import styles from './photo.module.scss'
 
-const PhotoGridTwo = () => {
+const BandierPhotosTwo = () => {
 	const variants = {
 		visible: {
 			opacity: 1,
@@ -40,4 +40,4 @@ const PhotoGridTwo = () => {
 		/>
 	</div>
 }
-export default PhotoGridTwo;
+export default BandierPhotosTwo;

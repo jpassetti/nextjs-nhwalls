@@ -16,18 +16,6 @@ const BandierDisplays = () => {
 	const [zoomLevel, setZoomLevel] = useState(.5)
 	const [currentPosterIndex, setCurrentPosterIndex] = useState(0)
 
-	useEffect(() => {
-		const timer = setInterval(() => {
-			if (currentPosterIndex >= posters.length - 1) {
-				setCurrentPosterIndex(0);
-			} else {
-				setCurrentPosterIndex(currentPosterIndex + 1);
-			}
-		}, 15000);
-		// clearing interval
-		return () => clearInterval(timer);
-	});
-
 	return <div style={
 		{
 			width: "3000px",
