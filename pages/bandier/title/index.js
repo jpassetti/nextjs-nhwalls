@@ -5,42 +5,12 @@ import Color from '../../../components/Color'
 import Heading from '../../../components/Heading'
 import RotateScreen from '../../../components/RotateScreen'
 
-import { getPosters, getPosterBySlug } from '../../../lib/posters'
-
-export async function getStaticPaths() {
-
-	const posters = await getPosters()
-
-	const paths = posters.map(poster => {
-		const { slug } = poster
-		console.log({slug});
-		return {
-			params: {
-				id: slug,
-			}
-		}
-	})
-	return {
-		paths,
-		fallback: false,
-	}
-}
-export async function getStaticProps({ params }) {
-	const posters = await getPosters()
-	//const posterData = await getPosterBySlug(params.id, posters)
-	const posterData = posters.filter(poster => poster.slug === params.id);
-	return {
-		props: {
-			posterData,
-		}
-	}
-
-}
-
-
-
 const TitleFeed = ({posterData}) => {
-	const { orange, blue } = posterData[0].title;
+	const titleData = {
+		orange: "Bandier",
+		blue: "Program"
+	}
+	const { orange, blue } = titleData;
 	
 	const variants = {
 		visible: {
