@@ -7,9 +7,6 @@ const Layout = ({children}) => {
 		<div className={styles.layout_top}>
 			{children}
 		</div>
-		<div className={styles.layout_bottom}>
-			{/*<Footer />*/}
-		</div>
 	</div>
 }
 export default Layout
