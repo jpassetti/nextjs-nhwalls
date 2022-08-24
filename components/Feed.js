@@ -73,9 +73,16 @@ const Feed = ({type}) => {
 		//console.log("timeout duration will be", second_digit);
 
 		if (isEven(currentMinutes)) {
+			// 0-5, 1-6, 2-7, 3-8, 4-9, 5-10
 			// 10 total slides.  If even, add 5, so that it starts with 6,7,8,9,10.
 			//console.log("EVEN MINUTE-- BOUNCE UP: current poster is first digit seconds plus five", first_digit+5);
-			setCurrentPoster(first_digit+5);
+			if (first_digit < 5) {
+				setCurrentPoster(first_digit + 5);
+			} else {
+				// e.g. 1:52:55pm
+				setCurrentPoster(first_digit + 4);
+			}
+			
 		} else {
 			//console.log("ODD MINUTE: current poster is first digit seconds", first_digit);
 			setCurrentPoster(first_digit);
