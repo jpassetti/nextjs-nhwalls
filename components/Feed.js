@@ -55,7 +55,7 @@ const Feed = ({type}) => {
 		//console.log(currentMinutes);
 
 		const currentSeconds = moment().format("s");
-		console.log("seconds string: ", currentSeconds);
+		//console.log("seconds string: ", currentSeconds);
 
 		let first_digit, second_digit;
 
@@ -74,10 +74,10 @@ const Feed = ({type}) => {
 
 		if (isEven(currentMinutes)) {
 			// 10 total slides.  If even, add 5, so that it starts with 6,7,8,9,10.
-			console.log("EVEN MINUTE-- BOUNCE UP: current poster is first digit seconds plus five", first_digit+5);
+			//console.log("EVEN MINUTE-- BOUNCE UP: current poster is first digit seconds plus five", first_digit+5);
 			setCurrentPoster(first_digit+5);
 		} else {
-			console.log("ODD MINUTE: current poster is first digit seconds", first_digit);
+			//console.log("ODD MINUTE: current poster is first digit seconds", first_digit);
 			setCurrentPoster(first_digit);
 		}
 
