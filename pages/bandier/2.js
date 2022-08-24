@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-import Feed from '../../components/Feed'
 import BandierPhotosOne from './photos/1'
 
 const TV2 = () => {
