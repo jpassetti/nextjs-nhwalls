@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 import Feed from '../../components/Feed'
+import BandierTitle from '../../bandier/title'
 
 const TV3 = () => {
 	useEffect(() => {
@@ -10,7 +11,7 @@ const TV3 = () => {
 		// clearing interval
 		return () => clearInterval(timer);
 	});
-	return <Feed type="title" />
+	return <BandierTitle />
 }
 export default TV3
 

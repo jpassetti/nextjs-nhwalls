@@ -1,7 +1,17 @@
-import Feed from '../../components/Feed'
+import { useEffect } from 'react';
 
-const TV1 = () => {
-	return <Feed type="poster" />
+import Feed from '../../components/Feed'
+import BandierPhotosOne from '../bandier/photos/1'
+
+const TV2 = () => {
+	useEffect(() => {
+		const timer = setInterval(() => {
+			location.reload();
+		}, 60000);
+		// clearing interval
+		return () => clearInterval(timer);
+	});
+	return <BandierPhotosOne />
 }
-export default TV1
+export default TV2
 
