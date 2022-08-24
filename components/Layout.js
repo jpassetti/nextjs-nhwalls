@@ -8,7 +8,7 @@ const Layout = ({children}) => {
 			{children}
 		</div>
 		<div className={styles.layout_bottom}>
-			<Footer />
+			{/*<Footer />*/}
 		</div>
 	</div>
 }
