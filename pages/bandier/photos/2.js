@@ -23,19 +23,19 @@ const BandierPhotosTwo = () => {
 		<div
 			className={styles.photo}
 			style={{
-				backgroundImage: `url('/images/run-the-show.jpg')`
+				backgroundImage: `url('/images/bandier/london-tower.jpg')`
 			}}
 		/>
 		<div
 			className={styles.photo}
 			style={{
-				backgroundImage: `url('/images/create-and-innovate.jpg')`
+				backgroundImage: `url('/images/bandier/park.jpg')`
 			}}
 		/>
 		<div
 			className={styles.photo}
 			style={{
-				backgroundImage: `url('/images/set-the-scene.jpg')`
+				backgroundImage: `url('/images/bandier/reahl-rezak.jpg')`
 			}}
 		/>
 	</div>
