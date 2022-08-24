@@ -9,7 +9,9 @@ const TV5 = () => {
 		// clearing interval
 		return () => clearInterval(timer);
 	});
-	return <BandierTitle />
+
+	return <Feed type="title" />
+	//return <BandierTitle />
 }
 export default TV5
 

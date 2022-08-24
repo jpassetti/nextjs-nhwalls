@@ -12,7 +12,8 @@ const TV1 = () => {
 		return () => clearInterval(timer);
 	});
 
-	return <BandierTitle />
+	//return <BandierTitle />
+	return <Feed type="title" />
 }
 export default TV1
 
