@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import Feed from '../../components/Feed'
-import BandierTitle from '../../bandier/title'
+import BandierTitle from '../bandier/title'
 
 const TV1 = () => {
 	useEffect(() => {
