@@ -72,7 +72,7 @@ const PosterContent = ({data}) => {
 			}}
 			variants={introVariants}
 		>
-			<Heading name="h1">
+			<Heading name="h1" cover>
 				<Color white>{orange}</Color><br />
 				<Color blue>{blue}</Color>
 			</Heading>
@@ -86,7 +86,7 @@ const PosterContent = ({data}) => {
 			variants={variants}
 		>
 			<Header>
-				<Heading name="h1">	
+				<Heading name="h1" inside>	
 					<Color orange>{orange}</Color><br />
 					<Color blue>{blue}</Color>
 			</Heading>

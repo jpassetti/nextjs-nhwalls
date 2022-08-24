@@ -4,7 +4,7 @@ import styles from './heading.module.scss'
 
 let cx = classNames.bind(styles)
 
-const Heading = ({ attribs, name, children, type, color, mb, mt, textAlign, category, className, rotate, xl }) => {
+const Heading = ({ attribs, name, children, type, color, mb, mt, textAlign, category, className, rotate, xl, cover, inside }) => {
 	let headingClasses = cx({
 		heading1: type === "h1" || name === "h1",
 		heading2: type === "h2" || name === "h2",
@@ -18,7 +18,9 @@ const Heading = ({ attribs, name, children, type, color, mb, mt, textAlign, cate
 		category: category,
 		[`${className}`]: className,
 		rotate: rotate,
-		xl: xl
+		xl: xl,
+		cover: cover,
+		inside: inside
 	});
 	switch (name) {
 		case "h1":

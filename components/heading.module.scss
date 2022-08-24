@@ -14,6 +14,12 @@
 	&.xl {
 		font-size: vars.$root*16;
 	}
+	&.cover {
+		font-size: vars.$root*12;
+	}
+	&.inside {
+		font-size: vars.$root*9;
+	}
 }
 .heading2 {
 	font-weight: bold;
