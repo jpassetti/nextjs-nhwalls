@@ -6,7 +6,7 @@ const TV4 = () => {
 	useEffect(() => {
 		const timer = setInterval(() => {
 			location.reload();
-		}, 60000);
+		}, 600000);
 		// clearing interval
 		return () => clearInterval(timer);
 	});
