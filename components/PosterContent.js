@@ -46,7 +46,7 @@ const PosterContent = ({data}) => {
 			width: `${100}vw`,
 			x: 0,
 			transition: {
-				duration: .5
+				duration: .75
 			}
 		},
 		hidden: {
@@ -55,7 +55,7 @@ const PosterContent = ({data}) => {
 			x: `${-100}vw`,
 			transition: {
 				delay: 3,
-				duration: .5
+				duration: .75
 			}
 		},
 	}
