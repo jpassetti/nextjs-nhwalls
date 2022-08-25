@@ -12,8 +12,8 @@ const TV2 = () => {
 		return () => clearInterval(timer);
 	});
 	
-	return <Feed type="poster" />
-	//return <BandierPhotosOne />
+	//return <Feed type="poster" />
+	return <BandierPhotosOne />
 }
 export default TV2
 
